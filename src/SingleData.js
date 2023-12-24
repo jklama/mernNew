@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SingleData = ({ item }) => {
+const SingleData = ({ item, handleDelete }) => {
   const { name, description } = item
   return (
     <>
@@ -8,6 +8,7 @@ const SingleData = ({ item }) => {
         <h1>{name}</h1>
         <p>{description}</p>
       </article>
+      <button onClick={() => handleDelete(item._id)}>Delete</button>
     </>
   )
 }
